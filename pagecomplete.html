@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page d'annexes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <style>
+/* Onglets templates - laisser tel quel (à moins de savoir ce que vous faites)*/
+.tabs{position:relative}.tabs,.tabs::after,.tabs::before,.tabs *,.tabs *::after,.tabs *::before{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0}.tabs--bottom .tabs__container{padding-bottom:30px}.tabs--bottom .tabs__list{bottom:0;left:0;position:absolute}.tabs--left{padding-left:50px}.tabs--left .tabs__list{left:0;position:absolute;top:0}.tabs--left .tabs__list li{display:block}.tabs--right{padding-right:50px}.tabs--right .tabs__list{position:absolute;right:0;top:0}.tabs--right .tabs__list li{display:block}.tabs__list li{cursor:pointer;display:inline-block}.tabs__list li.is-active{font-weight:700}.tabs__container article{left:-999rem;opacity:0;position:absolute;top:-999rem;-webkit-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;visibility:hidden}.tabs__container article::before,.tabs__container article::after{clear:both;content:'';display:block}.tabs__container article.is-active{-webkit-animation-duration:1s;animation-duration:1s;opacity:1;position:static;visibility:visible} *{box-sizing: border-box;}
+
+:root{
+--background: #f4f4f4; 
+--text: #000;
+--accent: #066b7a; /*couleur des fonds d'onglets actifs, titres, poignée de la scrollbar, etc. */
+--font: 'open sans', sans-serif; 
+    }
+
+body {
+font-family: var(--font);
+color: var(--text); 
+margin:0px;
+font-size: 14px;
+padding:0px; 
+text-align:center;
+background: var(--background);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {width: 5px;} 
+::-webkit-scrollbar-track {background-color: var(--background);}
+::-webkit-scrollbar-thumb {background-color: var(--accent); border-radius: 3px;}
+
+
+/* containers */
+#annexes { /* container de toutes les annexes, titres d'onglets et contenu d'onglets compris*/
+    margin: 50px auto;
+    padding: 10px;
+    height: 507px;
+    width: 900px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.tabs__list { /* container des noms des onglets dans leur ensemble*/
+width: 200px;
+height: 490px;
+padding: 20px 30px 0px 30px;
+font-family: var(--font);
+text-transform: uppercase;
+font-size: 16px;
+border-right: solid 1px var(--accent);
+}
+
+.tabs__list li { /*noms des onglets individuellement*/
+  padding: 2px;
+  margin: 7px 0px;
+  background-color: var(--background);
+  color: var(--text);
+  border-radius: 5px;
+
+}
+
+ .tabs__list li.is-active { /*onglet actif/ouvert */
+ color: white;
+ background-color: var(--accent);
+ border-radius: 5px;
+
+}
+
+.tabs__container { 
+    margin-left: 180px;
+    height: 490px;
+    width: 80%;
+    overflow: auto;
+}
+ .tabs__container article { /*contenu des onglets*/
+ padding:20px;
+ max-width: 100%;
+}
+
+/* ELEMENTS ESTHETIQUES : titres, dividers, etc. */
+
+#annexes h1{ 
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#annexes h1 span, #annexes h2 span{ /*titres avec fond*/
+    color: white;
+ background-color: var(--accent);
+ border-radius: 5px;
+ padding: 0px 3px;
+}
+
+#annexes h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+#annexes h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 1px solid var(--accent);
+    text-align: left;
+    margin: 10px 20px;
+}
+
+
+.tabs__container p{ /* paragraphes */
+    padding: 20px;
+    text-align: justify;
+    padding: 10px 40px;
+    font-size: 14px;
+}
+
+#annexes .dvd{ /*barre de séparation */
+border-bottom: 1px solid var(--accent);
+  width: 400px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#annexes blockquote{ /*encadré de texte mis en valeur */
+    width: 450px;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 3px;
+    margin: auto;
+    text-align: justify;
+}
+
+#annexes b{ /*texte en gras*/
+    color: var(--accent);
+}
+
+#annexes img{ /*images*/
+    width: 400px;
+    border-radius: 3px;
+}
+
+#annexes a{ /* liens */
+    text-decoration: none;
+    color: var(--accent);
+
+}
+    </style>
+    <div id="annexes">
+       <section class="tabs tabs--left">
+
+      <!-- NOMS DES ONGLETS -->  
+      
+      <ul class="tabs__list">
+          <li class="is-active">ACCUEIL</li> <!-- onglet affiché automatiquement au chargement de la page -->
+          <li>balises</li>
+          <li>onglet 3  </li>
+          <li>onglet 4</li>
+          <li>crédits</li>
+        </ul>
+
+        <div class="tabs__container">
+            <!-- CONTENU DU PREMIER ONGLET "accueil" -->
+          <article class="is-active">
+            <h1><span>page d'annexes</span> libre service</h1>
+            <div class="dvd"></div>
+<p>
+            Ce libre service est destiné à la communauté RPG forumactif, simplifié au possible. 
+            Chaque onglet s'affiche au clic, plus d'onglets peuvent bien sûr être ajoutés. Le code est entièrement personnalisable et modifiable, et est proposé essentiellement en tant que base. Il est cependant possible de l'utiliser tel quel.
+</p>
+
+<p>Le code peut être ajouté comme une page dans les modules forumactif, également compatible avec tumblr (et probablement ailleurs). Il peut probablement être adapté en page d'accueil ou post, mais je recommanderais dans ce cas là d'utiliser directement le libre service de Jessica Stamos dont je me suis servie pour les onglets (le lien se trouve dans les crédits).</p>
+<blockquote>Les codes et autres informations d'installation se trouvent dans l'onglet <b>informations</b>. L'onglet <b>exemples et balises</b> sert de démo pour les éléments esthétiques du CSS, comme les titres, cet encadré ou du simple texte.<br>
+L'onglet <b>crédits</b> n'est pas à négliger non plus, et il vous est bien sûr demandé de partager ces crédits dans le cas où vous vous servez de ce code comme base.</blockquote>
+          </article>
+          <!-- FIN PREMIER ONGLET -->
+
+          <!--CONTENU DEUXIEME ONGLET "balises" -->
+          <article>
+         <h1>titre balise h1</h1>
+         <h1><span>h1 avec un fond (balise span)</span></h1>
+         <br />
+         <!-- le divider, ligne de séparation --> <div class="dvd"></div> <!-- -->
+
+         <h2>titre balise h2</h2>
+         <h2><span>h2 avec un fond (balise span)</span></h2>
+         <br />
+         <p>Paragraphe simple, balise p, avec <b>du texte en bras, balise b</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         </p>
+         <br />
+        <blockquote>Balise blockquote, pour mettre du texte en valeur, pour les citations ou les éléments importants.</blockquote>
+        <br />
+
+        <h3>titre balise h3</h3>
+        <br />
+        <p>Paragraphe simple, balise p, avec <b>du texte en bras, balise b</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+            </article>
+<!-- FIN DEUXIEME ONGLET-->
+
+<!-- CONTENU TROISIEME ONGLET "onglet 3"-->
+          <article> <h1><span>ONGLET 3</span></h1>
+            <div class="dvd"></div>
+
+          </article>
+
+          <!-- FIN TROISIEME ONGLET -->
+
+          <!-- CONTENU QUATRIEME ONGLET "onglet 4"-->
+          <article>
+              <h1>ONGLET 4.</h1>
+          </article>
+          <!-- FIN QUATRIEME ONGLET-->
+
+          <!-- CONTENU ONGLET CREDITS (conseillé de le laisser à la fin et d'ajouter vos onglets supplémentaires au-dessus de celui-ci)-->
+
+          <article> <h1><span>crédits</span></h1>
+            <div class="dvd"></div>
+            <blockquote>La page a été codée par <a href="https://nonpastrop.tumblr.com/">blue</a>, avec pour base le script et template de <a href="https://jessikuhcodes.tumblr.com/">Jessica Stamos</a>.
+                L'esthétique simplifiée et le thème général sont inspirés par le <a href="https://blank-theme.com/">Blank Theme</a> de <a href="https://code-lab.tumblr.com/">Genius Panda/code-lab</a>.
+            </blockquote>
+          </article>
+          <!-- FIN CREDITS -->
+
+
+          <!-- POUR AJOUTER UN NOUVEL ONGLET :
+
+        Dans la liste des titres de vos onglets, collez ceci:
+        <li>NOM DE L'ONGLET</li>
+
+        Placez le où vous le voulez dans la liste, puis copiez ceci:
+         <article> 
+             CONTENU DE L'ONGLET.
+          </article>
+
+          Collez-le en fonction de la position de votre onglet dans la liste des noms.
+          Si votre liste de noms d'onglets ressemble à ceci:
+          <li>onglet 1</li> 
+          <li>onglet 2</li>
+          <li>onglet 3</li>
+          
+          Votre contenu doit ressembler à ceci:
+          <article>contenu onglet 1</article>
+          <article>contenu onglet 2</article>
+          et etc. 
+
+
+          Pour toute question concernant le code, vous pouvez me contacter sur tumblr:
+          https://nonpastrop.tumblr.com/ask
+
+          Le script étant un libre service, je ne pourrais pas vous aider à ce sujet (je n'y connais: rien). 
+
+
+        -->
+        </div>
+       </section></div>
+
+       <!-- SCRIPT -->
+<script>/**
+    * Created by Jessica Stamos (https://jessicastamos.com)
+    * Refer to the repo for updates/additional information
+    * https://gitlab.com/jnstamos/vanilla-js-multiple-tabs
+    * Contact: jessica@jessicastamos.com
+    */
+   
+   "use strict";var tabs=function(){function d(e){return Array.prototype.slice.call(e)}d(document.querySelectorAll("ul.tabs__list > li")).forEach(function(e){e.addEventListener("click",function(){!function(e){var t,c=e.parentNode,i=c.parentNode,a=i.querySelector(".tabs__container"),n=d(c.children),r=d(a.children),s=n.indexOf(e),l=i.querySelectorAll(".is-active");if(t="is-active",!(-1<" ".concat(e.className," ").indexOf(" ".concat(t," ")))){for(var o=0;o<l.length;o++)l[o].classList.remove("is-active");e.classList.add("is-active"),r[s].classList.add("is-active")}}(e)})})}();</script>
+   <!-- FIN SCRIPT -->
+</body>
+</html>
